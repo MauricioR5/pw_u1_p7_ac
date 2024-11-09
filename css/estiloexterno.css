@@ -1,7 +1,8 @@
+/*1. Centrados generales*/
 * {
     text-align: center;
 }
-
+/*2. Selector viene dado por el nombre del elemento*/
 h1 {
     color: #cdb4db;
     font-size: 40px;
@@ -23,4 +24,46 @@ button {
     color: #e0e1dd;
     background-color: #415a77;
     border-radius: 15px;
+}
+
+.titulos{
+    color: mediumslateblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+#id_pie_pagina_uce{
+    color: darkslategrey;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: blanchedalmond;
+}
+
+img[src]{
+    margin-top: 10px;
+    height: 500px;
+    width: 700px;
+    padding: 5px;
+    border: 2px solid blue;
+}
+
+input[type="text"]{
+
+    background-color: rgba(155, 204, 76, 0.726);
+}
+
+button:hover{
+    color: chocolate;
+    background-color: bisque;
+}
+.titulos:hover{
+    color: aqua;
+    background-color: black;
+}
+
+/*Combinacion de selectores*/
+
+h1, h3, h5{
+    color: red;
+    background-color: yellowgreen;
 }
