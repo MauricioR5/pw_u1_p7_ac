@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fef6e4; margin: 0; padding: 20px;">
+    <header>
+    </header>
+    <nav>
+        <ul id="menu" style="list-style-type: none; padding: 0; margin-bottom: 20px; background-color: #c3dbd9; color: #4b4a67; border-radius: 10px;">
+            <li style="padding: 10px; border-bottom: 1px solid #4b4a67;">Calculadora</li>
+            <li style="padding: 10px; border-bottom: 1px solid #4b4a67;">Número 1</li>
+            <li style="padding: 10px; border-bottom: 1px solid #4b4a67;">Número 2</li>
+            <li style="padding: 10px;">Número 3</li>
+        </ul>
+    </nav>
+    <section>
+        <h3 id="label1" style="margin-bottom: 10px; color: #3d405b;">Número 1</h3>
+        <input id="num1" type="number" style="padding: 5px; margin-bottom: 15px; display: block; width: 200px; border: 2px solid #e4bad4; border-radius: 5px; background-color: #f9e0dd;">
+        <h3 id="label2" style="margin-bottom: 10px; color: #3d405b;">Número 2</h3>
+        <input id="num2" type="number" style="padding: 5px; margin-bottom: 15px; display: block; width: 200px; border: 2px solid #e4bad4; border-radius: 5px; background-color: #f9e0dd;">
+        <button style="padding: 10px; margin-right: 10px; background-color: #ffcbf2; border: none; border-radius: 5px; color: #4b4a67;" onclick="document.getElementById('label1').style.color='red'">Cambiar Color</button>
+        <button style="padding: 10px; margin-right: 10px; background-color: #ffcbf2; border: none; border-radius: 5px; color: #4b4a67;" onclick="document.getElementById('label1').style.fontSize='40px'">Cambiar Tamaño</button>
+        <button style="padding: 10px; margin-right: 10px; background-color: #ffcbf2; border: none; border-radius: 5px; color: #4b4a67;" onclick="document.getElementById('label1').innerText='Nuevo Valor'">Cambiar Texto</button>
+        <button style="padding: 10px; background-color: #ffcbf2; border: none; border-radius: 5px; color: #4b4a67;" onclick="document.getElementById('menu').innerHTML += '<li style=\'padding: 10px; border-bottom: 1px solid #4b4a67;\'>Calculadora 4</li>'">Agregar Elemento</button>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
