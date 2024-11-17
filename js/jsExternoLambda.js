@@ -43,7 +43,7 @@ const conceptosJS = () => {
     console.log(numerosPares);
     const numeros = numerosImpares.concat(numerosPares);
     console.log(numeros);
-    for(const dia of diasSemana){
+    for (const dia of diasSemana) {
         console.log(dia);
         if(dia==='Viernes'){
             console.log('Al fin viernes!!!')
@@ -60,7 +60,7 @@ const conceptosJS = () => {
             ciudadNacimiento: "Quito"
         }
     console.log(miEstudiante);
-        console.log(miEstudiante.nombre);
+    console.log(miEstudiante.nombre);
     console.log(miEstudiante.edad);
     if (miEstudiante.edad === 33) {
         console.log('Tiene 33')
@@ -93,4 +93,97 @@ const conceptosJS = () => {
     } else {
         console.log('No son lo mismo');
     }
+     //Arreglo de objetos
+     const est1 = {
+        nombre: "Mauricio",
+        apellido: "Cacuango",
+        edad: 25
+    }
+    const est2 = {
+        nombre: "Miguel",
+        apellido: "Angel",
+        edad: 18
+    }
+    const est3 = {
+        nombre: "Roberto",
+        apellido: "Bolaños",
+        edad: 40
+    }
+    const arregloEstudiantes = [est1, est2, est3];
+    console.log(arregloEstudiantes)
+    console.log(arregloEstudiantes[1])
+    console.log(arregloEstudiantes[1].nombre)
+    const arregloEstudiantes2 = [
+        { nombre: "Carlos", apellido: "Tobar", edad: 35 },
+        { nombre: "Anita", apellido: "Teran", edad: 39 },
+        { nombre: "Andrea", apellido: "Andrade", edad: 31 },
+        { nombre: "Daniel", apellido: "Correa", edad: 39 },
+        { nombre: "Carla", apellido: "Castillo", edad: 31 }];
+    console.log(arregloEstudiantes2);
+    console.table(arregloEstudiantes2);
+    //uso del pop
+    console.log("uso del pop")
+    const estudiante = arregloEstudiantes2.pop();
+    console.log(estudiante);
+    console.table(arregloEstudiantes2);
+    //Desestructuración de arreglos
+    const colores = ['Amarillo', 'Azul', 'Verde', 'Rojo', 'Rosado'];
+    const [c1, c2, c3, c4, c5] = colores;
+    console.log(c1);
+    console.log(c5);
+    const [m1, m2, m3, m4, m5] = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];
+    console.log(m1);
+    console.log(m5);
+    //console.log(m8); //undefined
+    const [, mes2, , , mes5] = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];
+    console.log(mes2);
+    console.log(mes5);
+    //Desestructuración de objetos
+    console.log("Desestructuracion de objetos")
+    const automovil = {
+        marca: 'Toyota',
+        modelo: 'Pruis',
+        anio: 2024,
+        color: 'Plateado'
+    }
+    /*
+        const { modelo, anio, marca, color } = automovil;
+        console.log(marca);
+        console.log(modelo);
+        console.log(anio);
+        console.log(color);*/
+    desestructuracion(automovil);
+    const { nombreP, raza, estatura } = { nombre: "Perro", raza: "Pastor", estatura: 120 }
+    console.log(nombreP);
+    console.log(raza);
+    console.log(estatura);
+    //desestructuración con un atributo de tipo objeto - complejo
+    //desestructurar el tipo objeto
+    const miTienda = {
+        nombre: "Cyber",
+        dueño: "Mauricio Cacuango", 
+        fechaInicio: 2024,
+        direccion: {
+            calle: "Av El Inca",
+            casa: "S897",
+            barrio: "El Inca"
+        }
+    }
+    //en dos pasos
+    /*const { dueño, direccion } = miTienda;
+    const { calle, casa, barrio} = direccion;
+    console.log(calle);*/
+    //en una sola linea
+    const dTienda = { dueño, direccion:{calle, casa, barrio} } = miTienda;
+    console.log(calle);
+    console.log(casa);
+    console.log(barrio);
+}
+// const desestructuracion = (automovil) 
+const desestructuracion = ({ modelo, anio, marca, color }) => {
+    console.log('Entro a desestructurar')
+    console.log(marca);
+    console.log(modelo);
+    console.log(anio);
+    console.log(color);
 }
