@@ -1,0 +1,38 @@
+.container{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora{
+    display: grid;
+   grid-template-columns: 50px 50px 50px 50px ;
+   grid-template-rows: 40px 40px 40px 40px 40px 40px;
+   padding: 10px;
+   border: solid rgb(52, 52, 148);
+   border-radius: 30px;
+   background-color: rgb(127, 172, 199);
+   box-shadow: 10px 10px 10px 10px rgb(38, 114, 133);
+}
+
+.display{
+    grid-column: span 4;
+    padding: 15px;
+    margin:  0px 0px 1px 0px;
+    border: double 1px rgb(1, 24, 26);
+    text-align: right;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+
+    
+}
+
+#idCero{
+    grid-column: span 2;
+}
+
+#idC{
+    grid-column: span 2;
+}
