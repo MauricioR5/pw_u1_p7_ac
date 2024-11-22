@@ -21,8 +21,8 @@
     margin:  0px 0px 1px 0px;
     border: double 1px rgb(1, 24, 26);
     text-align: right;
-    background-color: whitesmoke;
-    border-radius: 5px;
+    background-color: rgb(175, 203, 221);
+    border-radius: 10px;
     color: black;
     font-size: 20px;
 
@@ -35,4 +35,21 @@
 
 #idC{
     grid-column: span 2;
+}
+
+button{
+    cursor: pointer;
+    margin: 3px;
+    padding: 5px;
+    border-radius: 15px;
+    border: ridge;
+    background: rgba(156, 173, 221, 0.774);
+    box-shadow: rgba(2, 9, 15, 0.589) 2px 2px 2px 2px;
+}
+
+button:hover{
+    background: rgb(72, 96, 102);
+}
+button:active{
+    background: rgba(156, 173, 221, 0.774);
 }
