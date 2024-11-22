@@ -1,47 +1,65 @@
-var num1 = 0;
-var num2 = 0;
- 
+var num1 = '';
+var num2 = '';
+var operacion = '';
+
 function setearValor(valor) {
-    let valorActual = document.getElementById('idDisplay').innerText;
-    console.log(valorActual)
-    document.getElementById('idDisplay').innerText = valor;
+    document.getElementById('id-display').innerText = valor;
 }
- 
-function setearValorConcat(valor) {
-    let valorActual = document.getElementById('idDisplay').innerText;
-    console.log(valorActual)
-    document.getElementById('idDisplay').innerText = valorActual + valor;
-}
- 
-function recibirValor(valor){
+
+function recibirValor(valor) {
+    const display = document.getElementById('id-display');
+    display.innerText += valor;
     console.log(valor);
-    if(num1===null){
-        num1 = valor;
-    }else{
-        num2 = valor;
+}
+
+function recibirOperacion(op) {
+    const display = document.getElementById('id-display');
+    if (op === 'C') {
+        limpiarDisplay();
+    } else if (op === 'back') {
+        display.innerText = display.innerText.slice(0, -1);
+    } else if (op === '=') {
+        if (num1 !== '' && operacion !== '') {
+            num2 = parseFloat(display.innerText);
+            calcular();
+        }
+    } else {
+        if (display.innerText !== '') {
+            num1 = parseFloat(display.innerText);
+            operacion = op;
+            limpiarDisplay();
+        }
     }
-    console.log(num1);
 }
- 
-function evaluarOperacion(op){
-    operacion = op
+
+function limpiarDisplay() {
+    document.getElementById('id-display').innerText = '';
 }
- 
-function recibirValor2(valor){
-    console.log(valor);
-    this.num2 = valor;
-    console.log(num2);
-    console.log(num1);
-}
- 
-function igual(){
+
+function calcular() {
     let valorFinal;
-    if(operacion === '+'){
-        num1 + num2;
-    }else if(operacion === '-'){
-        num1 - num2;
-    }else if(operacion === 'X'){
-        num1*num2;
-    }setearValor(valorFinal);
+    switch (operacion) {
+        case '+':
+            valorFinal = num1 + num2;
+            break;
+        case '-':
+            valorFinal = num1 - num2;
+            break;
+        case 'X':
+            valorFinal = num1 * num2;
+            break;
+        case '/':
+            valorFinal = num1 / num2;
+            break;
+        case '%':
+            valorFinal = num1 % num2;
+            break;
+        default:
+            valorFinal = 'Error';
+    }
+    console.log(valorFinal);
+    setearValor(valorFinal);
+    num1 = '';
+    num2 = '';
+    operacion = '';
 }
- 

@@ -16,29 +16,27 @@
         <div>
             <div class="container">
                 <div class="calculadora">
-                    <div id="id-display" class="display">
-                    1+2
+                    <div id="id-display" class="display"></div>
+                    <button id="idC" onClick="recibirOperacion('C')">C</button>
+                    <button onClick="recibirOperacion('back')">&larr;</button>
+                    <button onClick="recibirOperacion('%')">%</button>
+                    <button onClick="recibirValor(7)">7</button>
+                    <button onClick="recibirValor(8)">8</button>
+                    <button onClick="recibirValor(9)">9</button>
+                    <button onClick="recibirOperacion('X')">X</button>
+                    <button onClick="recibirValor(4)">4</button>
+                    <button onClick="recibirValor(5)">5</button>
+                    <button onClick="recibirValor(6)">6</button>
+                    <button onClick="recibirOperacion('-')">-</button>
+                    <button onClick="recibirValor(1)">1</button>
+                    <button onClick="recibirValor(2)">2</button>
+                    <button onClick="recibirValor(3)">3</button>
+                    <button onClick="recibirOperacion('+')">+</button>
+                    <button id="idCero" onClick="recibirValor(0)">0</button>
+                    <button onClick="recibirOperacion('.')">.</button>
+                    <button onClick="recibirOperacion('=')">=</button>
                 </div>
-                <button id="idC" onClick="handleClick('C')">C</button>
-                <button onClick="handleClick('back')">&larr;</button>
-                <button onClick="handleClick('%')">%</button>
-                <button onclick="recibirValor(7)">7</button>
-                <button onclick="recibirValor(8)">8</button>
-                <button onclick="recibirValor(9)">9</button>
-                <button  onClick="recibirValor(X)">X</button>
-                <button onClick="recibirValor(4)">4</button>
-                <button  onClick="recibirValor(5)">5</button>
-                <button  onClick="recibirValor(6)">6</button>
-                <button  onClick="handleClick('-')">-</button>
-                <button  onClick="recibirValor(1)">1</button>
-                <button  onClick="recibirValor(2)">2</button>
-                <button  onClick="recibirValor(3)">3</button>
-                <button  onClick="handleClick('+')">+</button>
-                <button  onClick="recibirValor(0)">0</button>
-                <button  onClick="handleClick('.')">.</button>
-                <button  onClick="handleClick('=')">=</button>
             </div>
-        </div>
         </div>
     </section>
     <footer></footer>
